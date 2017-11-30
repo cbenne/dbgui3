@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace dbgui3
 {
-    public partial class partform : Form
+    public partial class jobform : Form
     {
-        public partform()
+        public jobform()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
         }
     }
 }

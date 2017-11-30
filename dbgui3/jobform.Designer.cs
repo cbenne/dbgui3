@@ -1,6 +1,6 @@
 ﻿namespace dbgui3
 {
-    partial class partform
+    partial class jobform
     {
         /// <summary>
         /// Required designer variable.
@@ -56,17 +56,17 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 479);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(901, 502);
+            this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(711, 3);
+            this.panel2.Location = new System.Drawing.Point(704, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 473);
+            this.panel2.Size = new System.Drawing.Size(194, 496);
             this.panel2.TabIndex = 0;
             // 
             // button1
@@ -78,7 +78,6 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -92,7 +91,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(702, 473);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(695, 496);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -102,7 +101,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(696, 427);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 450);
             this.dataGridView1.TabIndex = 3;
             // 
             // tableLayoutPanel3
@@ -117,7 +116,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(696, 34);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(689, 34);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // comboBox1
@@ -128,7 +127,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ID:",
-            "Name:"});
+            "Process:"});
             this.comboBox1.Location = new System.Drawing.Point(3, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(180, 33);
@@ -141,28 +140,27 @@
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(203, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(490, 33);
+            this.textBox1.Size = new System.Drawing.Size(483, 33);
             this.textBox1.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2, 384);
+            this.button2.Location = new System.Drawing.Point(3, 407);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 86);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Select";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // partform
+            // jobform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 479);
+            this.ClientSize = new System.Drawing.Size(901, 502);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "partform";
-            this.Text = "Part Search";
+            this.Name = "jobform";
+            this.Text = "jobform";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
