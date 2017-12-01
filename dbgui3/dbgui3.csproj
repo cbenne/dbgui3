@@ -75,7 +75,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="analysiscontrol.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="analysiscontrol.Designer.cs">
       <DependentUpon>analysiscontrol.cs</DependentUpon>
