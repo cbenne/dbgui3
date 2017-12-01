@@ -12,10 +12,14 @@ namespace dbgui3
 {
     public partial class orderwizard : Form
     {
+        public DataTable suppliers;
         public orderwizard()
         {
             InitializeComponent();
             textBox4.Text = FunctionsList.newOrderID().ToString();
+            suppliers = FunctionsList.SupplierIDAutoComplete();
+            comboBox1.DataSource = suppliers;
+            comboBox1.DisplayMember = "name";
         }
 
         private void orderwizard_Load(object sender, EventArgs e)
@@ -25,7 +29,7 @@ namespace dbgui3
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FunctionsList.insertOrder(Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox3.Text), Convert.ToDouble(textBox2.Text), Convert.ToInt32(suppliers.Rows[comboBox1.SelectedIndex][0]));
             Close();
         }
 

@@ -138,6 +138,12 @@
     <Compile Include="salescontrol.Designer.cs">
       <DependentUpon>salescontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="saleswizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saleswizard.Designer.cs">
+      <DependentUpon>saleswizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="supplierwizard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="salescontrol.resx">
       <DependentUpon>salescontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saleswizard.resx">
+      <DependentUpon>saleswizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="supplierwizard.resx">
       <DependentUpon>supplierwizard.cs</DependentUpon>

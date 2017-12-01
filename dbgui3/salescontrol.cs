@@ -17,8 +17,10 @@ namespace dbgui3
             InitializeComponent();
         }
 
-
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saleswizard sw = new saleswizard();
+            sw.ShowDialog();
+        }
     }
 }

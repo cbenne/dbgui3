@@ -135,6 +135,22 @@ namespace dbgui3
             return datagrid;
         }
 
+        public static DataTable CustomerIDAutoComplete()
+        {
+            string query = "select id, email from customer";
+            conn.Open();
+            MySqlCommand command = new MySqlCommand(query, conn);
+            DataTable datagrid = new DataTable();
+            try
+            {
+                using (MySqlDataReader sdr = command.ExecuteReader())
+                { datagrid = new DataTable(); datagrid.Load(sdr); }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            conn.Close();
+            return datagrid;
+        }
+
         public static DataTable findProcessIDint(string pid)
         {
             string query = "select job.id as 'Job ID', description as 'Process', j_date as 'Date', quantity as 'Quantity', CASE WHEN completed = 0 THEN 'False' ELSE 'True' END as Completed from job left outer join process on job.process_id = process.id where process.description like '%" + pid + "%'";
@@ -474,7 +490,7 @@ namespace dbgui3
         public static int newSaleID()
         {
             conn.Open();
-            string query = "select max(id) from purchase";
+            string query = "select max(receipt_id) from purchase";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             int max = 0;
             try
@@ -509,7 +525,7 @@ namespace dbgui3
             return max;
         }
 
-        public static string insertOrder(int oid, int pid, int qty, int cid, double costPer, int sid)
+        public static string insertOrder(int oid, int pid, int qty, double costPer, int sid)
         {
             string query = "update part set quantity = (quantity + " + qty.ToString() + ") where id = " + pid.ToString();
             conn.Open();

@@ -46,6 +46,7 @@ namespace dbgui3
 
         private void cartesianChart1_ChildChanged_1(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
+            /*
             DataTable dt = FunctionsList.analysisdata();
 
             foreach (DataRow r in dt.Rows)
@@ -77,7 +78,7 @@ namespace dbgui3
                 {
                     LabelFormatter = value => value.ToString()
                 });
-            }
+            }*/
         }
     }
 }
