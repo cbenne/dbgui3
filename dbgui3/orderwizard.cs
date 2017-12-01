@@ -24,12 +24,12 @@ namespace dbgui3
 
         private void orderwizard_Load(object sender, EventArgs e)
         {
-            textBox4.Text = "77";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FunctionsList.insertOrder(Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox3.Text), Convert.ToDouble(textBox2.Text), Convert.ToInt32(suppliers.Rows[comboBox1.SelectedIndex][0]));
+            MessageBox.Show(FunctionsList.insertOrder(Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox3.Text), Convert.ToDouble(textBox2.Text), Convert.ToInt32(suppliers.Rows[comboBox1.SelectedIndex][0])));
             Close();
         }
 

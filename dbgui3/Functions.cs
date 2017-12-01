@@ -539,6 +539,22 @@ namespace dbgui3
                 conn.Close();
                 return "Update Failed";
             }
+            conn.Close();
+
+            query = "insert into purchase_order (id, supplier_id, o_date) values(" + oid.ToString() + ", " + sid.ToString() + ", '"
+                + (DateTime.Now).ToString("MM/dd/yyyy") + "')";
+            conn.Open();
+            MySqlCommand command3 = new MySqlCommand(query, conn);
+            try
+            {
+                command3.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return "Insert Failed";
+            }
+            conn.Close();
 
             query = "insert into order_part(order_id, part_id, cost_per, quantity) values(" + oid.ToString() + ", " + pid.ToString() + ", "
                 + costPer + ", " + qty + ")";
@@ -555,20 +571,7 @@ namespace dbgui3
             }
             conn.Close();
 
-            query = "insert into order_part(id, supplier_id, o_date) values(" + oid.ToString() + ", " + sid.ToString() + ", '"
-                + (DateTime.Now).ToString("MM/DD/YYYY") + "')";
-            conn.Open();
-            MySqlCommand command3 = new MySqlCommand(query, conn);
-            try
-            {
-                command3.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                conn.Close();
-                return "Insert Failed";
-            }
-            conn.Close();
+            
             return "Success";
 
 
