@@ -136,6 +136,12 @@
     <Compile Include="salescontrol.Designer.cs">
       <DependentUpon>salescontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="supplierwizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplierwizard.Designer.cs">
+      <DependentUpon>supplierwizard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="analysiscontrol.resx">
       <DependentUpon>analysiscontrol.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="salescontrol.resx">
       <DependentUpon>salescontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplierwizard.resx">
+      <DependentUpon>supplierwizard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
