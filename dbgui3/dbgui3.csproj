@@ -98,6 +98,12 @@
     <Compile Include="jobform.Designer.cs">
       <DependentUpon>jobform.cs</DependentUpon>
     </Compile>
+    <Compile Include="newemployeewizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newemployeewizard.Designer.cs">
+      <DependentUpon>newemployeewizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ordercontrol.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jobform.resx">
       <DependentUpon>jobform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newemployeewizard.resx">
+      <DependentUpon>newemployeewizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ordercontrol.resx">
       <DependentUpon>ordercontrol.cs</DependentUpon>

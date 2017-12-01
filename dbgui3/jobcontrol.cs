@@ -19,13 +19,13 @@ namespace dbgui3
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (uxcompleted.Checked)
             {
-                checkBox1.ImageIndex = 3;
+                uxcompleted.ImageIndex = 3;
             }
             else
             {
-                checkBox1.ImageIndex = -1;
+                uxcompleted.ImageIndex = -1;
             }
         }
 
@@ -37,6 +37,7 @@ namespace dbgui3
                 if (result == DialogResult.OK)
                 {
                     MessageBox.Show("Success in search! Congratulations.");
+                    uxProcessName.Enabled = false;
                 }
             }
         }
