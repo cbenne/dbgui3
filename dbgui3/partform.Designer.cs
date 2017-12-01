@@ -30,13 +30,17 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -69,6 +73,17 @@
             this.panel2.Size = new System.Drawing.Size(194, 473);
             this.panel2.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(2, 384);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(189, 86);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Select";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,8 +114,14 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NAME,
+            this.Q,
+            this.Column4});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 43);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(696, 427);
             this.dataGridView1.TabIndex = 3;
@@ -144,15 +165,25 @@
             this.textBox1.Size = new System.Drawing.Size(490, 33);
             this.textBox1.TabIndex = 1;
             // 
-            // button2
+            // ID
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2, 384);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 86);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Select";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ID.HeaderText = "Part ID";
+            this.ID.Name = "ID";
+            // 
+            // NAME
+            // 
+            this.NAME.HeaderText = "Part Name";
+            this.NAME.Name = "NAME";
+            // 
+            // Q
+            // 
+            this.Q.HeaderText = "Quantity";
+            this.Q.Name = "Q";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Base Cost";
+            this.Column4.Name = "Column4";
             // 
             // partform
             // 
@@ -184,5 +215,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Q;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
