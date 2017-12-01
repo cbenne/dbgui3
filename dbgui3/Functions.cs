@@ -219,6 +219,23 @@ namespace dbgui3
             return datagrid;
         }
 
+        public static DataTable analysisdata()
+        {
+            string query = "select part_id, p_date, price_per, base_cost from purchase left outer join part on part_id = id";
+            conn.Open();
+            MySqlCommand command = new MySqlCommand(query, conn);
+            DataTable datagrid = new DataTable();
+            try
+            {
+                using (MySqlDataReader sdr = command.ExecuteReader())
+                { datagrid = new DataTable(); datagrid.Load(sdr); }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            conn.Close();
+            return datagrid;
+
+        }
+
         public static DataTable findEmployee(string name, string skill, int id)
         {
             
