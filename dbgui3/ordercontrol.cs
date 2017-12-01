@@ -19,7 +19,18 @@ namespace dbgui3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using (orderwizard ow = new dbgui3.orderwizard())
+            {
+                ow.ShowDialog();
+             }
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using(supplierwizard sw = new supplierwizard())
+            {
+                sw.ShowDialog();
+            }
         }
     }
 }
