@@ -37,13 +37,13 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-=======
+
+
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
->>>>>>> eb1978a413638facba0f2ad71c9732db3c1f6971
+
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -81,7 +81,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
             this.button2.Location = new System.Drawing.Point(3, 473);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
@@ -89,7 +89,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Select";
             this.button2.UseVisualStyleBackColor = true;
-=======
+
             this.button2.Location = new System.Drawing.Point(2, 384);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 86);
@@ -97,7 +97,7 @@
             this.button2.Text = "Select";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
->>>>>>> eb1978a413638facba0f2ad71c9732db3c1f6971
+
             // 
             // button1
             // 
@@ -137,13 +137,13 @@
             this.Q,
             this.Column4});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
+
             this.dataGridView1.Location = new System.Drawing.Point(4, 53);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
+
             this.dataGridView1.Location = new System.Drawing.Point(3, 43);
             this.dataGridView1.MultiSelect = false;
->>>>>>> eb1978a413638facba0f2ad71c9732db3c1f6971
+
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -192,8 +192,7 @@
             this.textBox1.Size = new System.Drawing.Size(653, 39);
             this.textBox1.TabIndex = 1;
             // 
-<<<<<<< HEAD
-=======
+
             // ID
             // 
             this.ID.HeaderText = "Part ID";
@@ -214,7 +213,6 @@
             this.Column4.HeaderText = "Base Cost";
             this.Column4.Name = "Column4";
             // 
->>>>>>> eb1978a413638facba0f2ad71c9732db3c1f6971
             // partform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
