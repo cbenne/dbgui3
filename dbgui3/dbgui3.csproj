@@ -104,6 +104,12 @@
     <Compile Include="ordercontrol.Designer.cs">
       <DependentUpon>ordercontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="orderwizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderwizard.Designer.cs">
+      <DependentUpon>orderwizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="partform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ordercontrol.resx">
       <DependentUpon>ordercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderwizard.resx">
+      <DependentUpon>orderwizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="partform.resx">
       <DependentUpon>partform.cs</DependentUpon>
