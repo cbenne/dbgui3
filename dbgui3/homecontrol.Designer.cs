@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homecontrol));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.uxPartsLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.uxEmployeesLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.uxActiveJobsLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -57,8 +57,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -98,17 +98,6 @@
             this.panel1.Size = new System.Drawing.Size(273, 134);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 19);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(264, 110);
-            this.panel2.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -120,6 +109,28 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.uxPartsLabel);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(3, 19);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(264, 110);
+            this.panel2.TabIndex = 0;
+            // 
+            // uxPartsLabel
+            // 
+            this.uxPartsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.uxPartsLabel.AutoSize = true;
+            this.uxPartsLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxPartsLabel.Location = new System.Drawing.Point(189, 55);
+            this.uxPartsLabel.Name = "uxPartsLabel";
+            this.uxPartsLabel.Size = new System.Drawing.Size(62, 30);
+            this.uxPartsLabel.TabIndex = 1;
+            this.uxPartsLabel.Text = "4,482";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -129,17 +140,6 @@
             this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Parts";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(189, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "4,482";
             // 
             // panel3
             // 
@@ -167,23 +167,23 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.uxEmployeesLabel);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(3, 19);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(264, 110);
             this.panel4.TabIndex = 0;
             // 
-            // label3
+            // uxEmployeesLabel
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(208, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "123";
+            this.uxEmployeesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uxEmployeesLabel.AutoSize = true;
+            this.uxEmployeesLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxEmployeesLabel.Location = new System.Drawing.Point(208, 55);
+            this.uxEmployeesLabel.Name = "uxEmployeesLabel";
+            this.uxEmployeesLabel.Size = new System.Drawing.Size(46, 30);
+            this.uxEmployeesLabel.TabIndex = 1;
+            this.uxEmployeesLabel.Text = "123";
             // 
             // label4
             // 
@@ -221,23 +221,23 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.uxActiveJobsLabel);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Location = new System.Drawing.Point(3, 19);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(264, 110);
             this.panel6.TabIndex = 0;
             // 
-            // label5
+            // uxActiveJobsLabel
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(187, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 30);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "147";
+            this.uxActiveJobsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uxActiveJobsLabel.AutoSize = true;
+            this.uxActiveJobsLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxActiveJobsLabel.Location = new System.Drawing.Point(187, 55);
+            this.uxActiveJobsLabel.Name = "uxActiveJobsLabel";
+            this.uxActiveJobsLabel.Size = new System.Drawing.Size(46, 30);
+            this.uxActiveJobsLabel.TabIndex = 1;
+            this.uxActiveJobsLabel.Text = "147";
             // 
             // label6
             // 
@@ -368,9 +368,9 @@
             this.Size = new System.Drawing.Size(960, 670);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -398,16 +398,16 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label uxEmployeesLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label uxPartsLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label uxActiveJobsLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox4;

@@ -28,11 +28,25 @@ namespace dbgui3
                     uxPartName.Text = partfinder.partname;
                     uxQty.Value = partfinder.qty;
                     uxBaseCost.Value = partfinder.basecost;
+                    uxPartName.Enabled = false;
                 }
             }
             
             
 
+        }
+
+        private void uxSubmit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(FunctionsList.insertUpdatePart(Convert.ToInt32(ux_PartID.Text), uxPartName.Text, (int) uxQty.Value, Convert.ToDouble(uxBaseCost.Value)));
+            uxPartName.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ux_PartID.Text = FunctionsList.newPartID().ToString();
+            uxPartName.Enabled = true;
+            uxSubmit.Enabled = true;
         }
     }
 }

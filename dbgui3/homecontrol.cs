@@ -15,6 +15,9 @@ namespace dbgui3
         public homecontrol()
         {
             InitializeComponent();
+            uxPartsLabel.Text = FunctionsList.totalParts().ToString();
+            uxEmployeesLabel.Text = FunctionsList.totalEmployees().ToString();
+            uxActiveJobsLabel.Text = FunctionsList.totalJobs().ToString();
         }
     }
 }

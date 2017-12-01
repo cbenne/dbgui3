@@ -43,13 +43,15 @@
             this.uxcompleted = new System.Windows.Forms.CheckBox();
             this.uxdateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.uxProcessName = new System.Windows.Forms.ListBox();
             this.uxqty = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.uxJobID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.uxProcessName = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.uxPartProduced = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -101,6 +103,7 @@
             this.uxSubmit.TabIndex = 0;
             this.uxSubmit.Text = "Submit";
             this.uxSubmit.UseVisualStyleBackColor = false;
+            this.uxSubmit.Click += new System.EventHandler(this.uxSubmit_Click);
             // 
             // imageList1
             // 
@@ -144,8 +147,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 81);
             this.button1.TabIndex = 0;
-            this.button1.Text = "New Part";
+            this.button1.Text = "New Job";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -175,10 +179,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.uxPartProduced);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.uxProcessName);
             this.panel2.Controls.Add(this.uxcompleted);
             this.panel2.Controls.Add(this.uxdateTimePicker1);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.uxProcessName);
             this.panel2.Controls.Add(this.uxqty);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -187,7 +193,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(3, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(580, 299);
+            this.panel2.Size = new System.Drawing.Size(579, 348);
             this.panel2.TabIndex = 1;
             // 
             // uxcompleted
@@ -200,7 +206,7 @@
             this.uxcompleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxcompleted.ImageKey = "(none)";
             this.uxcompleted.ImageList = this.imageList1;
-            this.uxcompleted.Location = new System.Drawing.Point(142, 162);
+            this.uxcompleted.Location = new System.Drawing.Point(142, 237);
             this.uxcompleted.Name = "uxcompleted";
             this.uxcompleted.Size = new System.Drawing.Size(37, 35);
             this.uxcompleted.TabIndex = 11;
@@ -210,7 +216,7 @@
             // uxdateTimePicker1
             // 
             this.uxdateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxdateTimePicker1.Location = new System.Drawing.Point(144, 221);
+            this.uxdateTimePicker1.Location = new System.Drawing.Point(142, 286);
             this.uxdateTimePicker1.Name = "uxdateTimePicker1";
             this.uxdateTimePicker1.Size = new System.Drawing.Size(309, 33);
             this.uxdateTimePicker1.TabIndex = 10;
@@ -219,27 +225,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 227);
+            this.label5.Location = new System.Drawing.Point(81, 292);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Date:";
             // 
-            // uxProcessName
-            // 
-            this.uxProcessName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxProcessName.FormattingEnabled = true;
-            this.uxProcessName.ItemHeight = 25;
-            this.uxProcessName.Location = new System.Drawing.Point(144, 61);
-            this.uxProcessName.Name = "uxProcessName";
-            this.uxProcessName.Size = new System.Drawing.Size(433, 29);
-            this.uxProcessName.TabIndex = 8;
-            // 
             // uxqty
             // 
             this.uxqty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.uxqty.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxqty.Location = new System.Drawing.Point(144, 111);
+            this.uxqty.Location = new System.Drawing.Point(142, 187);
             this.uxqty.Name = "uxqty";
             this.uxqty.Size = new System.Drawing.Size(86, 33);
             this.uxqty.TabIndex = 6;
@@ -248,7 +244,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 166);
+            this.label4.Location = new System.Drawing.Point(25, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 25);
             this.label4.TabIndex = 5;
@@ -258,7 +254,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 111);
+            this.label3.Location = new System.Drawing.Point(48, 189);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 25);
             this.label3.TabIndex = 4;
@@ -293,6 +289,38 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Job ID:";
             // 
+            // uxProcessName
+            // 
+            this.uxProcessName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.uxProcessName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxProcessName.FormattingEnabled = true;
+            this.uxProcessName.Location = new System.Drawing.Point(142, 58);
+            this.uxProcessName.Name = "uxProcessName";
+            this.uxProcessName.Size = new System.Drawing.Size(435, 33);
+            this.uxProcessName.TabIndex = 12;
+            this.uxProcessName.Leave += new System.EventHandler(this.uxProcessName_Leave);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(39, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 25);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Produces:";
+            // 
+            // uxPartProduced
+            // 
+            this.uxPartProduced.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.uxPartProduced.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxPartProduced.FormattingEnabled = true;
+            this.uxPartProduced.Location = new System.Drawing.Point(141, 122);
+            this.uxPartProduced.Name = "uxPartProduced";
+            this.uxPartProduced.Size = new System.Drawing.Size(435, 33);
+            this.uxPartProduced.TabIndex = 14;
+            this.uxPartProduced.Leave += new System.EventHandler(this.uxPartProduced_Leave);
+            // 
             // jobcontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,7 +350,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker uxdateTimePicker1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox uxProcessName;
         private System.Windows.Forms.NumericUpDown uxqty;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -334,5 +361,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox uxProcessName;
+        private System.Windows.Forms.ComboBox uxPartProduced;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -34,13 +34,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Q = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.uxCombobox = new System.Windows.Forms.ComboBox();
+            this.uxSearchBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -76,9 +72,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2, 312);
+            this.button2.Location = new System.Drawing.Point(3, 377);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 70);
+            this.button2.Size = new System.Drawing.Size(188, 93);
             this.button2.TabIndex = 3;
             this.button2.Text = "Select";
             this.button2.UseVisualStyleBackColor = true;
@@ -114,11 +110,6 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NAME,
-            this.Q,
-            this.Column4});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 43);
             this.dataGridView1.MultiSelect = false;
@@ -128,37 +119,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(696, 427);
             this.dataGridView1.TabIndex = 3;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "Part ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // NAME
-            // 
-            this.NAME.HeaderText = "Part Name";
-            this.NAME.Name = "NAME";
-            this.NAME.ReadOnly = true;
-            // 
-            // Q
-            // 
-            this.Q.HeaderText = "Quantity";
-            this.Q.Name = "Q";
-            this.Q.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Base Cost";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.uxCombobox, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.uxSearchBox, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -167,29 +134,29 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(696, 34);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // comboBox1
+            // uxCombobox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.uxCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uxCombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uxCombobox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxCombobox.FormattingEnabled = true;
+            this.uxCombobox.Items.AddRange(new object[] {
             "ID:",
             "Name:"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 33);
-            this.comboBox1.TabIndex = 0;
+            this.uxCombobox.Location = new System.Drawing.Point(3, 3);
+            this.uxCombobox.Name = "uxCombobox";
+            this.uxCombobox.Size = new System.Drawing.Size(194, 33);
+            this.uxCombobox.TabIndex = 0;
             // 
-            // textBox1
+            // uxSearchBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.uxSearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(203, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(490, 33);
-            this.textBox1.TabIndex = 1;
+            this.uxSearchBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSearchBox.Location = new System.Drawing.Point(203, 3);
+            this.uxSearchBox.Name = "uxSearchBox";
+            this.uxSearchBox.Size = new System.Drawing.Size(490, 33);
+            this.uxSearchBox.TabIndex = 1;
             // 
             // partform
             // 
@@ -218,12 +185,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox uxCombobox;
+        private System.Windows.Forms.TextBox uxSearchBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Q;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

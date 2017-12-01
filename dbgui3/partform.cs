@@ -24,21 +24,24 @@ namespace dbgui3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            
-            //object[] row = { (int)3, (string)"name", (int)3, (double)4.5 };
-            //dt.LoadDataRow(row, true);
-            dataGridView1.DataSource = dt;
+            if (uxCombobox.SelectedIndex == 0)
+            {
+                dataGridView1.DataSource = FunctionsList.findPartID(Convert.ToInt32(uxSearchBox.Text));
+            }
+            else
+            {
+                dataGridView1.DataSource = FunctionsList.findPartName(uxSearchBox.Text);
+            }
             button2.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //DataGridViewRow r = dataGridView1.SelectedRows[0];
-            this.partid = 3; //Convert.ToInt32(r.Cells[0].Value.ToString());
-            this.partname = "name"; //r.Cells[1].Value.ToString();
-            this.qty = 4; //Convert.ToInt32(r.Cells[2].Value.ToString());
-            this.basecost = Convert.ToDecimal(4.5); //Convert.ToDecimal(r.Cells[3].Value.ToString());
+            DataGridViewRow r = dataGridView1.SelectedRows[0];
+            this.partid = Convert.ToInt32(r.Cells[0].Value.ToString());
+            this.partname = r.Cells[1].Value.ToString();
+            this.qty = Convert.ToInt32(r.Cells[2].Value.ToString());
+            this.basecost = Convert.ToDecimal(r.Cells[3].Value.ToString());
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

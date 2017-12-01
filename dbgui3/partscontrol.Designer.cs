@@ -33,29 +33,29 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uxSubmit = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ux_PartID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.uxPartName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.uxQty = new System.Windows.Forms.NumericUpDown();
-            this.uxBaseCost = new System.Windows.Forms.NumericUpDown();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.uxBaseCost = new System.Windows.Forms.NumericUpDown();
+            this.uxQty = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.uxPartName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ux_PartID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uxQty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uxBaseCost)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxBaseCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxQty)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,6 +100,16 @@
             this.uxSubmit.TabIndex = 0;
             this.uxSubmit.Text = "Submit";
             this.uxSubmit.UseVisualStyleBackColor = false;
+            this.uxSubmit.Click += new System.EventHandler(this.uxSubmit_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "addicon.png");
+            this.imageList1.Images.SetKeyName(1, "searchicon.png");
+            this.imageList1.Images.SetKeyName(2, "submiticon.png");
+            this.imageList1.Images.SetKeyName(3, "checkicon.png");
             // 
             // flowLayoutPanel2
             // 
@@ -135,106 +145,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "New Part";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.uxBaseCost);
-            this.panel2.Controls.Add(this.uxQty);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.uxPartName);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.ux_PartID);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(580, 299);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Part ID:";
-            // 
-            // ux_PartID
-            // 
-            this.ux_PartID.Enabled = false;
-            this.ux_PartID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ux_PartID.Location = new System.Drawing.Point(113, 10);
-            this.ux_PartID.Name = "ux_PartID";
-            this.ux_PartID.Size = new System.Drawing.Size(60, 33);
-            this.ux_PartID.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Part Name:";
-            // 
-            // uxPartName
-            // 
-            this.uxPartName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxPartName.Location = new System.Drawing.Point(113, 58);
-            this.uxPartName.Name = "uxPartName";
-            this.uxPartName.Size = new System.Drawing.Size(438, 33);
-            this.uxPartName.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Quantity:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Base Cost:";
-            // 
-            // uxQty
-            // 
-            this.uxQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uxQty.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxQty.Location = new System.Drawing.Point(113, 111);
-            this.uxQty.Name = "uxQty";
-            this.uxQty.Size = new System.Drawing.Size(86, 33);
-            this.uxQty.TabIndex = 6;
-            // 
-            // uxBaseCost
-            // 
-            this.uxBaseCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uxBaseCost.DecimalPlaces = 2;
-            this.uxBaseCost.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxBaseCost.Location = new System.Drawing.Point(113, 164);
-            this.uxBaseCost.Name = "uxBaseCost";
-            this.uxBaseCost.Size = new System.Drawing.Size(86, 33);
-            this.uxBaseCost.TabIndex = 7;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "addicon.png");
-            this.imageList1.Images.SetKeyName(1, "searchicon.png");
-            this.imageList1.Images.SetKeyName(2, "submiticon.png");
-            this.imageList1.Images.SetKeyName(3, "checkicon.png");
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -262,6 +173,97 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.uxBaseCost);
+            this.panel2.Controls.Add(this.uxQty);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.uxPartName);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.ux_PartID);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(3, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(580, 299);
+            this.panel2.TabIndex = 1;
+            // 
+            // uxBaseCost
+            // 
+            this.uxBaseCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uxBaseCost.DecimalPlaces = 2;
+            this.uxBaseCost.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxBaseCost.Location = new System.Drawing.Point(113, 164);
+            this.uxBaseCost.Name = "uxBaseCost";
+            this.uxBaseCost.Size = new System.Drawing.Size(86, 33);
+            this.uxBaseCost.TabIndex = 7;
+            // 
+            // uxQty
+            // 
+            this.uxQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uxQty.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxQty.Location = new System.Drawing.Point(113, 111);
+            this.uxQty.Name = "uxQty";
+            this.uxQty.Size = new System.Drawing.Size(86, 33);
+            this.uxQty.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 25);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Base Cost:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Quantity:";
+            // 
+            // uxPartName
+            // 
+            this.uxPartName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxPartName.Location = new System.Drawing.Point(113, 58);
+            this.uxPartName.Name = "uxPartName";
+            this.uxPartName.Size = new System.Drawing.Size(438, 33);
+            this.uxPartName.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Part Name:";
+            // 
+            // ux_PartID
+            // 
+            this.ux_PartID.Enabled = false;
+            this.ux_PartID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ux_PartID.Location = new System.Drawing.Point(113, 10);
+            this.ux_PartID.Name = "ux_PartID";
+            this.ux_PartID.Size = new System.Drawing.Size(60, 33);
+            this.ux_PartID.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Part ID:";
+            // 
             // partscontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,11 +275,11 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uxQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxBaseCost)).EndInit();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uxQty)).EndInit();
             this.ResumeLayout(false);
 
         }

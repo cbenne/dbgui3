@@ -83,6 +83,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Select";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -166,7 +167,7 @@
             // 
             this.uxDateLabel.AutoSize = true;
             this.uxDateLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDateLabel.Location = new System.Drawing.Point(148, 5);
+            this.uxDateLabel.Location = new System.Drawing.Point(204, 3);
             this.uxDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxDateLabel.Name = "uxDateLabel";
             this.uxDateLabel.Size = new System.Drawing.Size(29, 25);
@@ -177,10 +178,10 @@
             // 
             this.uxEndDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.uxEndDate.Location = new System.Drawing.Point(189, 1);
+            this.uxEndDate.Location = new System.Drawing.Point(334, 1);
             this.uxEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.uxEndDate.Name = "uxEndDate";
-            this.uxEndDate.Size = new System.Drawing.Size(99, 33);
+            this.uxEndDate.Size = new System.Drawing.Size(140, 33);
             this.uxEndDate.TabIndex = 1;
             // 
             // uxBeginDate
@@ -190,7 +191,7 @@
             this.uxBeginDate.Location = new System.Drawing.Point(21, 1);
             this.uxBeginDate.Margin = new System.Windows.Forms.Padding(2);
             this.uxBeginDate.Name = "uxBeginDate";
-            this.uxBeginDate.Size = new System.Drawing.Size(102, 33);
+            this.uxBeginDate.Size = new System.Drawing.Size(164, 33);
             this.uxBeginDate.TabIndex = 0;
             // 
             // comboBox1
