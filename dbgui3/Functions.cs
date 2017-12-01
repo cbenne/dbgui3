@@ -119,6 +119,22 @@ namespace dbgui3
             return datagrid;
         }
 
+        public static DataTable SupplierIDAutoComplete()
+        {
+            string query = "select id as sid, name from supplier";
+            conn.Open();
+            MySqlCommand command = new MySqlCommand(query, conn);
+            DataTable datagrid = new DataTable();
+            try
+            {
+                using (MySqlDataReader sdr = command.ExecuteReader())
+                { datagrid = new DataTable(); datagrid.Load(sdr); }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            conn.Close();
+            return datagrid;
+        }
+
         public static DataTable findProcessIDint(string pid)
         {
             string query = "select job.id as 'Job ID', description as 'Process', j_date as 'Date', quantity as 'Quantity', CASE WHEN completed = 0 THEN 'False' ELSE 'True' END as Completed from job left outer join process on job.process_id = process.id where process.description like '%" + pid + "%'";
