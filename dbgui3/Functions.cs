@@ -422,7 +422,7 @@ namespace dbgui3
         public static int newOrderID()
         {
             conn.Open();
-            string query = "select max(id) from order";
+            string query = "select max(id) from purchase_order";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             int max = 0;
             try
@@ -498,6 +498,48 @@ namespace dbgui3
             try
             {
                 command2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return "Insert Failed";
+            }
+            conn.Close();
+            return "Success";
+        }
+
+        public static int insertPerson(string name, string address)
+        {
+            int pid = newPersonID();
+            string query = "insert into person(id, name, address) values(" + pid.ToString() + ", '" + name + "', '" + address + "')";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return -1;
+            }
+            conn.Close();
+            return pid;
+        }
+
+        public static string insertEmployee(string jtitle, string salary, string name, string address)
+        {
+            int pid = insertPerson(name, address);
+            if (pid == -1)
+            {
+                return "Failed";
+            }
+            string query = "insert into employee (id, job_title, salary) values (" + pid.ToString() + ", '" + jtitle + "', " + salary + ")";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

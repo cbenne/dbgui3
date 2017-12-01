@@ -100,6 +100,11 @@
             this.uxSalary.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.uxSalary.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxSalary.Location = new System.Drawing.Point(188, 298);
+            this.uxSalary.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.uxSalary.Name = "uxSalary";
             this.uxSalary.Size = new System.Drawing.Size(199, 33);
             this.uxSalary.TabIndex = 3;

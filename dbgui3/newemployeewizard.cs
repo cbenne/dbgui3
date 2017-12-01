@@ -20,6 +20,7 @@ namespace dbgui3
         private void button1_Click(object sender, EventArgs e)
         {
             //add employee function
+            MessageBox.Show(FunctionsList.insertEmployee(uxTitle.Text, uxSalary.Value.ToString(), uxName.Text, uxAddress.Text));
         }
     }
 }

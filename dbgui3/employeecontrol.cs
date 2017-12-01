@@ -40,7 +40,8 @@ namespace dbgui3
 
         private void uxAdd_Click(object sender, EventArgs e)
         {
-
+            newemployeewizard wiz = new newemployeewizard();
+            wiz.ShowDialog();
         }
     }
 }

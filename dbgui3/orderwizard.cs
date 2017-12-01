@@ -15,6 +15,7 @@ namespace dbgui3
         public orderwizard()
         {
             InitializeComponent();
+            textBox4.Text = FunctionsList.newOrderID().ToString();
         }
 
         private void orderwizard_Load(object sender, EventArgs e)
@@ -57,6 +58,24 @@ namespace dbgui3
             if (textBox4.Text != "" && textBox3.Text != "" && textBox2.Text != "" && textBox1.Text != "")
             {
                 button1.Enabled = true;
+            }
+        }
+
+        private void uxselectpart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (partform partfinder = new partform())
+            {
+                var result = partfinder.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    textBox1.Text = partfinder.partid.ToString();
+                    
+                }
             }
         }
     }
