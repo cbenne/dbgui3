@@ -65,6 +65,7 @@ namespace dbgui3
         {
             tabchange();
             uxAnalysisButton.BackColor = Color.Silver;
+            analysiscontrol1.BringToFront();
         }
 
         private void tabchange()

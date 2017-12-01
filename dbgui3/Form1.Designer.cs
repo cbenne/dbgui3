@@ -334,6 +334,7 @@
         private salescontrol salescontrol1;
         private ordercontrol ordercontrol1;
         private employeecontrol employeecontrol1;
+        private analysiscontrol analysiscontrol1;
     }
 }
 
