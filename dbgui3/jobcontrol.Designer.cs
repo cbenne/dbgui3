@@ -171,6 +171,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(144, 10);
             this.textBox1.Name = "textBox1";
@@ -290,6 +291,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // jobcontrol
             // 

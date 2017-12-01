@@ -19,6 +19,7 @@ namespace dbgui3
         public partform()
         {
             InitializeComponent();
+            button2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace dbgui3
             //object[] row = { (int)3, (string)"name", (int)3, (double)4.5 };
             //dt.LoadDataRow(row, true);
             dataGridView1.DataSource = dt;
+            button2.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -28,5 +28,17 @@ namespace dbgui3
                 checkBox1.ImageIndex = -1;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (jobform jobfinder = new jobform())
+            {
+                var result = jobfinder.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    MessageBox.Show("Success in search! Congratulations.");
+                }
+            }
+        }
     }
 }

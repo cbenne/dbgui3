@@ -163,6 +163,7 @@
             // 
             // ux_PartID
             // 
+            this.ux_PartID.Enabled = false;
             this.ux_PartID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_PartID.Location = new System.Drawing.Point(113, 10);
             this.ux_PartID.Name = "ux_PartID";
