@@ -476,7 +476,7 @@ namespace dbgui3
             return max;
         }
 
-        public static string insertOrder(int oid, int pid, int qty, int cid, double costPer)
+        public static string insertOrder(int oid, int pid, int qty, int cid, double costPer, int sid)
         {
             string query = "update part set quantity = (quantity + " + qty.ToString() + ") where id = " + pid.ToString();
             conn.Open();
@@ -491,8 +491,8 @@ namespace dbgui3
                 return "Update Failed";
             }
 
-            query = "insert into order(id, part_id, quantity, company_id, base_cost) values(" + oid.ToString() + ", " + pid.ToString() + ", "
-                + qty + ", " + cid + ", " + costPer + ")";
+            query = "insert into order_part(order_id, part_id, cost_per, quantity) values(" + oid.ToString() + ", " + pid.ToString() + ", "
+                + costPer + ", " + qty + ")";
             conn.Open();
             MySqlCommand command2 = new MySqlCommand(query, conn);
             try
@@ -505,7 +505,24 @@ namespace dbgui3
                 return "Insert Failed";
             }
             conn.Close();
+
+            query = "insert into order_part(id, supplier_id, o_date) values(" + oid.ToString() + ", " + sid.ToString() + ", '"
+                + (DateTime.Now).ToString("MM/DD/YYYY") + "')";
+            conn.Open();
+            MySqlCommand command3 = new MySqlCommand(query, conn);
+            try
+            {
+                command3.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return "Insert Failed";
+            }
+            conn.Close();
             return "Success";
+
+
         }
 
         public static int insertPerson(string name, string address)
