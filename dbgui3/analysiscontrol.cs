@@ -47,37 +47,50 @@ namespace dbgui3
         private void cartesianChart1_ChildChanged_1(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
             DataTable dt = FunctionsList.analysisdata();
-
-            foreach (DataRow r in dt.Rows)
+            //part_id, p_date, price_per, base_cost
+            ColumnSeries col1 = new ColumnSeries() { DataLabels = true, Values = new ChartValues<int>(), LabelPoint = point => point.Y.ToString() };
+            
+            ColumnSeries col2 = new ColumnSeries() { DataLabels = true, Values = new ChartValues<int>(), LabelPoint = point => point.Y.ToString() };
+            Axis ax = new Axis() { Separator = new Separator() { Step = 1, IsEnabled = false } };
+            ax.Labels = new List<string>();
+            foreach(DataRow purchase in dt.Rows)
             {
-                
+                double sum = (double)purchase[2] * (double)purchase[3];
+                DateTime x = DateTime.Parse(purchase[1].ToString());
+                int a = ax.Labels.IndexOf(x.Month.ToString() + "-" + x.Year.ToString());
+                if (a == -1)
+                {
+                     ax.Labels.Add(x.Month.ToString() + "-" + x.Year.ToString());
+                    col1.Values.Add(sum);
+                }
+                else
+                {
+                    col1.Values[a] = (double)col1.Values[a] + sum;
+                }
             }
-            using ()//database in paranthesis ex. Something db = new Something
+            foreach (DataRow sale in dt.Rows)
             {
-                var data1 = db. ;//function from database for purchases of product
-                ColumnSeries col1 = new ColumnSeries() { DataLabels = true, Values = new ChartValues<int>(), LabelPoint = point => point.Y.ToString() };
-                var data2 = db. ; //function from database for sales of product
-                ColumnSeries col2 = new ColumnSeries() { DataLabels = true, Values = new ChartValues<int>(), LabelPoint = point => point.Y.ToString() };
-                Axis ax = new Axis() { Separator = new Separator() { Step = 1, IsEnabled = false } };
-                ax.Labels = new List<string>();
-                foreach(var x in data1)
+                double sum2 = (double)sale[2] * (double)sale[4];
+                DateTime x = DateTime.Parse(sale[1].ToString());
+                int a = ax.Labels.IndexOf(x.Month.ToString() + "-" + x.Year.ToString());
+                if (a == -1)
                 {
-                    col1.Values.Add(x.Total.Value);
-                    ax.Labels.Add(x.Month.toString());
+                    ax.Labels.Add(x.Month.ToString() + "-" + x.Year.ToString());
+                    col2.Values.Add(sum2);
                 }
-                foreach (var x in data2)
+                else
                 {
-                    col2.Values.Add(x.Total.Value);
-                    ax.Labels.Add(x.Month.toString());
+                    col2.Values[a] = (double)col2.Values[a] + sum2;
                 }
-                cartesianChart1.Series.Add(col1);
-                cartesianChart1.Series.Add(col2);
-                cartesianChart1.AxisX.Add(ax);
-                cartesianChart1.AxisY.Add(new Axis
-                {
-                    LabelFormatter = value => value.ToString()
-                });
             }
+            cartesianChart1.Series.Add(col1);
+            cartesianChart1.Series.Add(col2);
+            cartesianChart1.AxisX.Add(ax);
+            cartesianChart1.AxisY.Add(new Axis
+            {
+                 LabelFormatter = value => value.ToString()
+            });
+            
         }
     }
 }

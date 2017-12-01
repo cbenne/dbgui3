@@ -237,7 +237,7 @@ namespace dbgui3
 
         public static DataTable analysisdata()
         {
-            string query = "select part_id, p_date, price_per, base_cost from purchase left outer join part on part_id = id";
+            string query = "select part_id, p_date, quantity, price_per, base_cost from purchase left outer join part on part_id = id";
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
             DataTable datagrid = new DataTable();
