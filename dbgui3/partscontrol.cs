@@ -16,5 +16,23 @@ namespace dbgui3
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (partform partfinder = new partform())
+            {
+                var result = partfinder.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    ux_PartID.Text = Convert.ToString(partfinder.partid);
+                    uxPartName.Text = partfinder.partname;
+                    uxQty.Value = partfinder.qty;
+                    uxBaseCost.Value = partfinder.basecost;
+                }
+            }
+            
+            
+
+        }
     }
 }
