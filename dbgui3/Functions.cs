@@ -253,7 +253,7 @@ namespace dbgui3
 
         public static DataTable analysisdata()
         {
-            string query = "select part_id, p_date, quantity, price_per, base_cost from purchase left outer join part on part_id = id";
+            string query = "select MONTH(STR_TO_DATE(p_date, '%m-%d-%y')) as mon, SUM(price_per * pu.quantity) as sold, SUM(base_cost * pu.quantity) as cost from purchase pu left outer join part pa on part_id = id group by MONTH(STR_TO_DATE(p_date, '%m-%d-%y'))";
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
             DataTable datagrid = new DataTable();
@@ -634,10 +634,11 @@ namespace dbgui3
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-
+            conn.Close();
+            conn.Open();
             if (pqty >= qty)
             {
-                query = "update part set (quantity = " + (pqty - qty).ToString() + ") where id = " + pid.ToString();
+                query = "update part set quantity = " + (pqty - qty).ToString() + " where id = " + pid.ToString();
                 MySqlCommand command3 = new MySqlCommand(query, conn);
                 try
                 {
@@ -654,9 +655,9 @@ namespace dbgui3
                 conn.Close();
                 return "WE DON'T HAVE THAT MANY PARTS";
             }
-
+            conn.Close();
             query = "insert into purchase(customer_id, part_id, receipt_id, price_per, quantity, p_date) values(" + cid.ToString() + ", " + pid.ToString() + ", "
-                + rid.ToString() + ", " + costPer.ToString() + ", " + qty + ", " + date.ToString("MM/DD/YYYY") + ")";
+                + rid.ToString() + ", " + costPer.ToString() + ", " + qty + ", '" + date.ToString("MM/DD/YYYY") + "')";
             conn.Open();
             MySqlCommand command2 = new MySqlCommand(query, conn);
             try

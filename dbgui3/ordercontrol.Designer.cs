@@ -98,6 +98,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(408, 236);
             this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
             // 
             // pictureBox2
             // 
